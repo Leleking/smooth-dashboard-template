@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import lottie from "lottie-web";
-import { Link, useLocation } from "react-router-dom";
 import { ReactComponent as DashboardIcon } from "../assets/icons/Dashboard.svg";
 import { ReactComponent as NoteBookIcon } from "../assets/icons/notebook.svg";
 import { ReactComponent as PaletteIcon } from "../assets/icons/palette.svg";
@@ -8,7 +7,6 @@ import { ReactComponent as NoteBook2Icon } from "../assets/icons/notebook2.svg";
 import { ReactComponent as AccountIcon } from "../assets/icons/account.svg";
 import { ReactComponent as BasketIcon } from "../assets/icons/basket.svg";
 import { ReactComponent as SettingsIcon } from "../assets/icons/wrench.svg";
-import clsx from "clsx";
 import NavItem from "../components/NavItem";
 
 const routes = [
@@ -24,10 +22,9 @@ const routes = [
 ];
 
 export default function AppLayout({ children }) {
-  const pathname = useLocation().pathname;
   var animation = useRef();
   const [animState, setAnimState] = useState(0);
-  let didInit = false;
+  const [didInit, setDidInit] = useState(false);
 
   const openMenu = () => {
     var element;
@@ -53,9 +50,10 @@ export default function AppLayout({ children }) {
         element.classList.remove("animate__fadeInLeft");
 
         element.classList.add("animate__fadeOutLeft");
-        setTimeout(() => {
+        element.classList.toggle("hidden");
+        /* setTimeout(() => {
           element.classList.toggle("hidden");
-        }, 100);
+        }, 100); */
 
         main_content.classList.remove("animate__fadeInLeft");
 
@@ -77,58 +75,70 @@ export default function AppLayout({ children }) {
 
   useEffect(() => {
     if (!didInit) {
-      didInit = true;
+      setDidInit(true);
       initHamburger();
     }
-  }, []);
+  }, [didInit]);
 
   return (
     <>
-      <div className="h-screen overflow-hidden">
-        <div className="relative min-h-screen">
-          <div className="border-b-2 py-5 sticky top-0 bg-white">
-            <div className="flex justify-between md:mx-20 mx-5  items-center">
-              <div className="flex items-center">
-                <div onClick={() => openMenu()} className="block md:hidden">
-                  <div className="h-[40px]" id="hamburger"></div>
-                </div>
-                <div>logo</div>
+      <div className="overflow-x-hidden relative h-screen">
+        <div className="border-b-2 py-5 sticky top-0 bg-white z-10">
+          <div className="flex justify-between md:mx-20 mx-5  items-center">
+            <div className="flex items-center">
+              <div onClick={() => openMenu()} className="block md:hidden">
+                <div className="h-[40px]" id="hamburger"></div>
               </div>
-              <div>Simeon Nortey</div>
+              <div>Smooth Dashboard</div>
             </div>
+            <div>Simeon Nortey</div>
           </div>
-          <div className="flex md:mx-20 mx-5">
-            <div
-              id="side-nav"
-              className="w-96 h-screen border-r-2 hidden md:block side-nav animate__animated"
-            >
-              <nav className=" fixed">
-                <div className="overflow-y-scroll h-screen pt-5 md:pt-10 md:pb-20">
-                  <ul className="flex flex-col space-y-6">
-                    {routes.map((route) => {
-                      if (route?.break)
-                        return <li className="pt-5">{route.name}</li>;
-                      return (
-                        <li>
-                          <NavItem
-                            path={route.to}
-                            Icon={route.Icon}
-                            name={route.name}
-                          />
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              </nav>
-            </div>
-            <div
-              id="main-content"
-              className="w-full animate__animated animate__faster "
-            >
-              <div className="w-full">
-                <div className="overflow-y-scroll h-screen pt-12 pb-20 pl-12 animate__animated animate__fadeIn">
-                  {children}
+        </div>
+        <div
+          className={`h-screen  ${
+            animState
+              ? "w-full overscroll-x-hidden"
+              : "w-full overflow-y-hidden"
+          }`}
+        >
+          <div className="relative min-h-screen">
+            <div className="flex md:mx-20 mx-0  ">
+              <div
+                id="side-nav"
+                className="w-screen md:w-1/5 h-screen border-r-2 hidden md:block side-nav animate__animated"
+              >
+                <nav className=" fixed">
+                  <div className="overflow-y-scroll h-screen pt-5 pl-5 md:pl-0 md:pt-10 md:pb-20">
+                    <ul className="flex flex-col space-y-6">
+                      {routes.map((route) => {
+                        if (route?.break)
+                          return <li className="pt-5">{route.name}</li>;
+                        return (
+                          <li>
+                            <NavItem
+                              path={route.to}
+                              Icon={route.Icon}
+                              name={route.name}
+                            />
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+              <div
+                id="main-content"
+                className="animate__animated animate__faster w-auto md:w-4/5"
+              >
+                <div
+                  className={`w-screen lg:w-full  ${
+                    animState ? "w-[100px] opacity-0" : "w-full"
+                  }`}
+                >
+                  <div className="overflow-y-scroll h-screen pt-12 pb-20 pl-2 pr-2 md:pl-12 animate__animated animate__fadeIn">
+                    {children}
+                  </div>
                 </div>
               </div>
             </div>

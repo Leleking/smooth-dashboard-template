@@ -7,7 +7,7 @@ export default function History() {
     <>
       <AppLayout>
         <div>
-          <PageHeader>Case Histories</PageHeader>
+          <PageHeader title="Histories" />
         </div>
       </AppLayout>
     </>

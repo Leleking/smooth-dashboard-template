@@ -10,13 +10,14 @@ export default function NavItem({ Icon, path, name }) {
     !active && "stroke-grey-300 ",
     "stroke-[0.2px]"
   );
+  const nameStyle = clsx(active && "text-primary", "pl-2");
   return (
     <Link to={path}>
       <div className="flex py-2">
         <span>
           <Icon className={fillStyle} />
         </span>
-        <span className="pl-2">{name}</span>
+        <span className={nameStyle}>{name}</span>
       </div>
 
       <div className={activeStyle}>
