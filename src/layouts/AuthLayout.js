@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LogoIcon from "../assets/logo.png";
 
 export default function AuthLayout({ children }) {
   return (
@@ -7,7 +8,9 @@ export default function AuthLayout({ children }) {
       <nav className="py-5">
         <ul className="flex justify-between items-center">
           <li className="text-lg">
-            <Link to="/login">Aggregor</Link>
+            <Link to="/">
+              <img src={LogoIcon} className="h-8" alt="logo" />
+            </Link>
           </li>
           <li>
             <Link to="/faqs">

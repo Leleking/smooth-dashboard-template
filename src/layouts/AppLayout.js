@@ -7,7 +7,9 @@ import { ReactComponent as NoteBook2Icon } from "../assets/icons/notebook2.svg";
 import { ReactComponent as AccountIcon } from "../assets/icons/account.svg";
 import { ReactComponent as BasketIcon } from "../assets/icons/basket.svg";
 import { ReactComponent as SettingsIcon } from "../assets/icons/wrench.svg";
+import LogoIcon from "../assets/logo.png";
 import NavItem from "../components/NavItem";
+import { Link } from "react-router-dom";
 
 const routes = [
   { name: "Dashboard", Icon: DashboardIcon, to: "/" },
@@ -83,15 +85,24 @@ export default function AppLayout({ children }) {
   return (
     <>
       <div className="overflow-x-hidden relative h-screen">
-        <div className="border-b-2 py-5 sticky top-0 bg-white z-10">
-          <div className="flex justify-between md:mx-20 mx-5  items-center">
+        <div className="border-b-2 py-2 sticky top-0 bg-white z-10">
+          <div className="flex justify-between lg:mx-20 mx-5  items-center">
             <div className="flex items-center">
-              <div onClick={() => openMenu()} className="block md:hidden">
+              <div onClick={() => openMenu()} className="block lg:hidden">
                 <div className="h-[40px]" id="hamburger"></div>
               </div>
-              <div>Smooth Dashboard</div>
+              <div className="">
+                <Link to="/login">
+                  <img src={LogoIcon} className="h-8" alt="logo" />
+                </Link>
+              </div>
             </div>
-            <div>Simeon Nortey</div>
+            <div>
+              <div className="flex font-bold items-center justify-center h-[40px] w-[40px] bg-secondary text-md rounded-full">
+                <span>SN</span>
+                {/* check oout https://avatars.dicebear.com/ to create awesome avatars */}
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -105,10 +116,10 @@ export default function AppLayout({ children }) {
             <div className="flex md:mx-20 mx-0  ">
               <div
                 id="side-nav"
-                className="w-screen md:w-1/5 h-screen border-r-2 hidden md:block side-nav animate__animated"
+                className="w-screen lg:w-1/5 h-screen border-r-2 hidden lg:block side-nav animate__animated"
               >
                 <nav className=" fixed">
-                  <div className="overflow-y-scroll h-screen pt-5 pl-5 md:pl-0 md:pt-10 md:pb-20">
+                  <div className="overflow-y-scroll h-screen pt-2 pl-5 lg:pl-0 lg:pt-10 lg:pb-20">
                     <ul className="flex flex-col space-y-6">
                       {routes.map((route) => {
                         if (route?.break)
@@ -129,14 +140,14 @@ export default function AppLayout({ children }) {
               </div>
               <div
                 id="main-content"
-                className="animate__animated animate__faster w-auto md:w-4/5"
+                className="animate__animated animate__faster w-auto lg:w-4/5"
               >
                 <div
                   className={`w-screen lg:w-full  ${
                     animState ? "w-[100px] opacity-0" : "w-full"
                   }`}
                 >
-                  <div className="overflow-y-scroll h-screen pt-12 pb-20 pl-2 pr-2 md:pl-12 animate__animated animate__fadeIn">
+                  <div className="overflow-y-scroll h-screen pt-12 pb-20 pl-2 pr-2 lg:pl-12 animate__animated animate__fadeIn">
                     {children}
                   </div>
                 </div>

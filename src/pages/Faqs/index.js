@@ -8,7 +8,7 @@ export default function index() {
       <div class="flex justify-center  md:px-8 animate__animated animate__fadeIn">
         <div class="w-8/12">
           <div class="text-center text-primary">
-            Basic things to know about Aggregar (FAQs)
+            Basic things to know about Mazzaroth (FAQs)
           </div>
           <div class="pt-7">
             <Accordion>
@@ -28,7 +28,7 @@ export default function index() {
                   investor, investee or business partner.
                 </div>
               </Accordion.Item>
-              <Accordion.Item id="3" title="Who can use Aggregar?">
+              <Accordion.Item id="3" title="Who can use Mazzaroth?">
                 <div className="pt-6">
                   This platform is designed to aid Investors, Risk Analysts,
                   Entrepreneurs, Lawyers and C- suite make informed decisions by
@@ -36,7 +36,10 @@ export default function index() {
                   investor, investee or business partner.
                 </div>
               </Accordion.Item>
-              <Accordion.Item id="4" title="How much does using Aggregar cost?">
+              <Accordion.Item
+                id="4"
+                title="How much does using Mazzaroth cost?"
+              >
                 <div className="pt-6">
                   This platform is designed to aid Investors, Risk Analysts,
                   Entrepreneurs, Lawyers and C- suite make informed decisions by

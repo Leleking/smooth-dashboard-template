@@ -12,8 +12,8 @@ export default function Login() {
         <div class="flex justify-center  md:px-8 animate__animated animate__fadeIn">
           <div class="w-8/12">
             <div class="text-center text-primary">
-              Aggregar enables rapid, enhanced due diligence that reduces costs.
-              Enter the required information to get started.
+              Mazzaroth enables rapid, enhanced due diligence that reduces
+              costs. Enter the required information to get started.
             </div>
             <form action="" class="pt-7">
               <div class="grid grid-cols-2 gap-4">
@@ -54,7 +54,7 @@ export default function Login() {
         <div class="flex justify-center  md:px-8 animate__animated animate__fadeIn">
           <div class="w-8/12">
             <div class="text-center text-primary">
-              Hello James, now please enter your address information
+              Hello Simeon, now please enter your address information
             </div>
             <form action="" class="pt-7">
               <div class="pt-4">
@@ -69,11 +69,11 @@ export default function Login() {
                 </div>
               </div>
               <div class="pt-9 text-grey-200 text-sm text-center">
-                By submitting this form, I agree to let Aggregar contact me via
+                By submitting this form, I agree to let Mazzaroth contact me via
                 email/phone about this service to complete my onboarding. I
                 acknowledge my information is protected under the
                 <Link to="" class="text-primary font-bold  underline">
-                  Aggregar Privacy Notice
+                  Mazzaroth Privacy Notice
                 </Link>
               </div>
             </form>
