@@ -15,7 +15,7 @@ Example pages
 ![logo](/src/assets/screens/Screenshot2.png)
 
 ### Accordion 
-![logo](/src/assets/screens/Screenshot2.png)
+![logo](/src/assets/screens/Screenshot3.png)
 
 ## Available Scripts
 
