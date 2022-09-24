@@ -1,3 +1,5 @@
+![logo](/src/assets/logo.png)
+
 # Mazzaroth Smooth Dashboard 
 
 ## about
