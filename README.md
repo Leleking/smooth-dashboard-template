@@ -7,6 +7,16 @@ Mazzaroth is a free react admin template with simple and clean transitions to he
 
 **Note: This project is still under development and is subject to change!**
 
+Example pages
+### Page Under Construction
+![logo](/src/assets/screens/Screenshot1.png)
+
+### Dashboard
+![logo](/src/assets/screens/Screenshot2.png)
+
+### Accordion 
+![logo](/src/assets/screens/Screenshot2.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
