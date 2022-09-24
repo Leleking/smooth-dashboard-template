@@ -3,7 +3,7 @@
 # Mazzaroth Smooth Dashboard 
 
 ## about
-Mazzaroth is a free react admin template with simple and clean transitions to help you get started on that admin portal or Dashboard you want to build.
+Mazzaroth is a free react admin template built using tailwindcss with simple and clean transitions and animations to help you get started on that admin portal or Dashboard you want to build.
 
 **Note: This project is still under development and is subject to change!**
 
