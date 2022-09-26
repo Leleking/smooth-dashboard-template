@@ -1,5 +1,12 @@
 import { Route, Routes } from "react-router-dom";
-import { Dashboard, Login, Faqs, History, UnderConstruction } from "../pages";
+import {
+  Dashboard,
+  Login,
+  Faqs,
+  History,
+  UnderConstruction,
+  Profile,
+} from "../pages";
 
 const Router = () => {
   return (
@@ -10,7 +17,7 @@ const Router = () => {
       <Route path="/history" element={<History />} />
       <Route path="/reports" element={<UnderConstruction />} />
       <Route path="/cases" element={<UnderConstruction />} />
-      <Route path="/profile" element={<UnderConstruction />} />
+      <Route path="/profile" element={<Profile />} />
       <Route path="/subscription" element={<UnderConstruction />} />
       <Route path="/settings" element={<UnderConstruction />} />
     </Routes>
