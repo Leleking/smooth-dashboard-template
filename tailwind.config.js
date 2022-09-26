@@ -37,6 +37,8 @@ module.exports = {
       },
       transitionProperty: {
         height: "height",
+        maxh: "max-height",
+        padding: "padding",
       },
     },
   },

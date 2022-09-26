@@ -22,9 +22,9 @@ const Item = ({ title, id, children }) => {
   const { expandedValue, toggleCollapse } = useContext(AccordionContext);
   const childrenStyle = clsx(
     expandedValue !== id
-      ? "h-0 duration-300  ease-out"
-      : `h-28 duration-300 ease-in`,
-    "overflow-hidden transition-height text-sm text-grey-200"
+      ? "max-h-0 duration-200  ease-out"
+      : `max-h-[500px] duration-300 ease-in`,
+    "overflow-hidden transition-maxh text-sm text-grey-200"
   );
   const closeIconStyle = clsx(
     expandedValue === id && "rotate-45",
