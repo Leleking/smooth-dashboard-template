@@ -12,12 +12,11 @@ import NavItem from "../components/NavItem";
 import { Link } from "react-router-dom";
 
 const routes = [
-  { name: "Dashboard", Icon: DashboardIcon, to: "/" },
-  { name: "CASES", break: true },
-  { name: "Case History", Icon: NoteBookIcon, to: "/history" },
-  { name: "Final Reports", Icon: PaletteIcon, to: "/reports" },
-  { name: "Cases In Progress", Icon: NoteBook2Icon, to: "/cases" },
-  { name: "ACCOUNT", break: true },
+  { name: "Home", Icon: DashboardIcon, to: "/" },
+  { name: "Compliance Documents", Icon: NoteBookIcon, to: "/history" },
+  { name: "Invoices", Icon: PaletteIcon, to: "/reports" },
+  { name: "Transactions", Icon: NoteBook2Icon, to: "/cases" },
+  { name: "Account", break: true },
   { name: "Profile", Icon: AccountIcon, to: "/profile" },
   { name: "Subscription", Icon: BasketIcon, to: "/subscription" },
   { name: "Settings", Icon: SettingsIcon, to: "/settings" },
@@ -84,16 +83,16 @@ export default function AppLayout({ children }) {
 
   return (
     <>
-      <div className="overflow-x-hidden relative h-screen">
+      <div className="overflow-hidden relative h-screen">
         <div className="border-b-2 py-2 sticky top-0 bg-white z-10">
-          <div className="flex justify-between lg:mx-20 mx-5  items-center">
+          <div className="flex justify-between lg:px-10 px-5  items-center">
             <div className="flex items-center">
               <div onClick={() => openMenu()} className="block lg:hidden">
                 <div className="h-[40px]" id="hamburger"></div>
               </div>
               <div className="">
                 <Link to="/login">
-                  <img src={LogoIcon} className="h-8" alt="logo" />
+                  <img src={LogoIcon} className="h-5 md:h-6" alt="logo" />
                 </Link>
               </div>
             </div>
@@ -113,17 +112,17 @@ export default function AppLayout({ children }) {
           }`}
         >
           <div className="relative min-h-screen">
-            <div className="flex md:mx-20 mx-0  ">
+            <div className="flex md:ml-10 mx-0  ">
               <div
                 id="side-nav"
-                className="w-screen lg:w-1/5 h-screen border-r-2 hidden lg:block side-nav animate__animated"
+                className="w-screen lg:w-1/6 h-screen border-r-2 hidden lg:block side-nav animate__animated"
               >
                 <nav className=" fixed">
                   <div className="overflow-y-scroll h-screen pt-2 pl-5 lg:pl-0 lg:pt-10 lg:pb-20">
                     <ul className="flex flex-col space-y-6">
                       {routes.map((route) => {
                         if (route?.break)
-                          return <li className="pt-5">{route.name}</li>;
+                          return <li className="pt-5 text-sm">{route.name}</li>;
                         return (
                           <li>
                             <NavItem
@@ -140,14 +139,14 @@ export default function AppLayout({ children }) {
               </div>
               <div
                 id="main-content"
-                className="animate__animated animate__faster w-auto lg:w-4/5"
+                className="animate__animated animate__faster w-auto lg:w-4/5 overflow-y-scroll h-screen"
               >
                 <div
-                  className={`w-screen lg:w-full  ${
+                  className={`w-screen h-full lg:w-full  ${
                     animState ? "w-[100px] opacity-0" : "w-full"
                   }`}
                 >
-                  <div className="overflow-y-scroll h-screen pt-12 pb-20 pl-2 pr-2 lg:pl-12 animate__animated animate__fadeIn">
+                  <div className="h-full pt-12 pb-20 pl-2 pr-2 lg:pl-12 animate__animated animate__fadeIn">
                     {children}
                   </div>
                 </div>
