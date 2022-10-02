@@ -62,7 +62,9 @@ export default function index() {
             </div>
           </PageHeader>
           <div>
-            <div className="text-primary text-lg font-normal">Recent cases</div>
+            <div className="text-primary text-lg font-normal pt-2">
+              Recent cases
+            </div>
           </div>
           <div className="pt-5">
             <Table columns={columns} data={dummyData} />
