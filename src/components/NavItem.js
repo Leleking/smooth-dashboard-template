@@ -14,9 +14,11 @@ export default function NavItem({ Icon, path, name }) {
   return (
     <Link to={path}>
       <div className="flex py-2">
-        <span>
-          <Icon className={fillStyle} />
-        </span>
+        {Icon && (
+          <span>
+            <Icon className={fillStyle} />
+          </span>
+        )}
         <span className={nameStyle}>{name}</span>
       </div>
 

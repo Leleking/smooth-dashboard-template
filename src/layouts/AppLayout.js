@@ -13,13 +13,15 @@ import { Link } from "react-router-dom";
 
 const routes = [
   { name: "Home", Icon: DashboardIcon, to: "/" },
-  { name: "Compliance Documents", Icon: NoteBookIcon, to: "/history" },
-  { name: "Invoices", Icon: PaletteIcon, to: "/reports" },
-  { name: "Transactions", Icon: NoteBook2Icon, to: "/cases" },
+  { name: "Case History", Icon: NoteBookIcon, to: "/history" },
+  { name: "Final Reports", Icon: PaletteIcon, to: "/reports" },
+  { name: "Cases In Progress", Icon: NoteBook2Icon, to: "/cases" },
   { name: "Account", break: true },
   { name: "Profile", Icon: AccountIcon, to: "/profile" },
   { name: "Subscription", Icon: BasketIcon, to: "/subscription" },
   { name: "Settings", Icon: SettingsIcon, to: "/settings" },
+  { name: "Other Pages", break: true },
+  { name: "404 Page", to: "/404" },
 ];
 
 export default function AppLayout({ children }) {

@@ -17,7 +17,6 @@
         animation-timing-function: ease-in;
     
     }
-
 @-webkit-keyframes thread2 {
 	  0%   { width: 0px; }
 	  100%{ width:100%;}
@@ -34,4 +33,15 @@
 	  0%   { width: 0px; }
 	  100%{ width:100%;}
 	}
+
+	div {
+  -ms-overflow-style: none; /* Edge, Internet Explorer */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll;
+}
+
+div::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
 }

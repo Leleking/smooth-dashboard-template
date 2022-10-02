@@ -4,4 +4,13 @@ import Faqs from "./Faqs";
 import History from "./History";
 import UnderConstruction from "./Maintenance/UnderConstruction";
 import Profile from "./Profile";
-export { Dashboard, Login, Faqs, History, UnderConstruction, Profile };
+import PageNotFound from "./errors/PageNotFound";
+export {
+  Dashboard,
+  Login,
+  Faqs,
+  History,
+  UnderConstruction,
+  Profile,
+  PageNotFound,
+};
