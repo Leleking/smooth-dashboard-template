@@ -22,6 +22,7 @@ const routes = [
   { name: "Settings", Icon: SettingsIcon, to: "/settings" },
   { name: "Other Pages", break: true },
   { name: "404 Page", to: "/404" },
+  { name: "Page Underconstruction", to: "/underconstruction" },
 ];
 
 export default function AppLayout({ children }) {

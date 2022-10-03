@@ -7,6 +7,9 @@ import {
   UnderConstruction,
   Profile,
   PageNotFound,
+  Reports,
+  Cases,
+  Subscription,
 } from "../pages";
 
 const Router = () => {
@@ -16,11 +19,12 @@ const Router = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/faqs" element={<Faqs />} />
       <Route path="/history" element={<History />} />
-      <Route path="/reports" element={<UnderConstruction />} />
-      <Route path="/cases" element={<UnderConstruction />} />
+      <Route path="/reports" element={<Reports />} />
+      <Route path="/cases" element={<Cases />} />
       <Route path="/profile" element={<Profile />} />
-      <Route path="/subscription" element={<UnderConstruction />} />
+      <Route path="/subscription" element={<Subscription />} />
       <Route path="/settings" element={<UnderConstruction />} />
+      <Route path="/underconstruction" element={<UnderConstruction />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
