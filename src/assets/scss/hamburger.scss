@@ -1,0 +1,10 @@
+.hamburger {
+    padding: 0px;
+    .hamburger-inner{
+        &::before, &::after{
+           @extend .hamburger-inner;
+        }
+        width: 30px;
+        height: 3px;
+    }
+}
