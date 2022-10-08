@@ -6,7 +6,7 @@ export default function index() {
   return (
     <AuthLayout>
       <div className="flex justify-center  md:px-8 animate__animated animate__fadeIn">
-        <div className="w-8/12">
+        <div className="w-full md:w-8/12">
           <div className="text-center text-primary">
             Basic things to know about Mazzaroth (FAQs)
           </div>

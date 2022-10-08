@@ -4,12 +4,12 @@ import LogoIcon from "../assets/logo.png";
 
 export default function AuthLayout({ children }) {
   return (
-    <div className="xl:px-96 lg:px-24 md:px-20 sm:px-10">
+    <div className="px-4 xl:px-96 lg:px-24 md:px-20 sm:px-10">
       <nav className="py-5">
         <ul className="flex justify-between items-center">
           <li className="text-lg">
             <Link to="/">
-              <img src={LogoIcon} className="h-8" alt="logo" />
+              <img src={LogoIcon} className="h-5 md:h-6" alt="logo" />
             </Link>
           </li>
           <li>

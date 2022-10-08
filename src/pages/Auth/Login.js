@@ -10,7 +10,7 @@ export default function Login() {
     <AuthLayout>
       {formStep === 1 && (
         <div className="flex justify-center  md:px-8 animate__animated animate__fadeIn">
-          <div className="w-8/12">
+          <div className="w-full md:w-8/12">
             <div className="text-center text-primary">
               Mazzaroth enables rapid, enhanced due diligence that reduces
               costs. Enter the required information to get started.
@@ -52,7 +52,7 @@ export default function Login() {
       )}
       {formStep === 2 && (
         <div className="flex justify-center  md:px-8 animate__animated animate__fadeIn">
-          <div className="w-8/12">
+          <div className="w-full md:w-8/12">
             <div className="text-center text-primary">
               Hello Simeon, now please enter your address information
             </div>
@@ -82,7 +82,7 @@ export default function Login() {
       )}
       {formStep === 3 && (
         <div className="flex justify-center  md:px-8 animate__animated animate__fadeIn">
-          <div className="w-8/12">
+          <div className="w-full md:w-8/12">
             <div className="text-center text-primary">
               Now select what package suites the purpose for which you want to
               use this platform
