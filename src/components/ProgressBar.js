@@ -1,9 +1,11 @@
 import clsx from "clsx";
 import React from "react";
 
-export default function ProgressBar({ progress = "20%", className, children }) {
+export default function ProgressBar({ progress = "20", className, children }) {
   const progressContainerStyle = `h-12 border rounded-lg relative`;
   const classes = clsx(progressContainerStyle, className);
+
+  // console.log("pr", progressWidth);
   return (
     <div className="relative bg-grey-100 rounded-lg">
       <div

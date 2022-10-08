@@ -32,8 +32,8 @@ export default function Subscription() {
               <div className="text-primary">Upgrade</div>
             </div>
             <div className="pt-5">
-              <ProgressBar progress="20%">
-                <div className="text-white">24 out of 50 searches used</div>
+              <ProgressBar progress={"43%"}>
+                <div className="text-white">43 out of 50 searches used</div>
               </ProgressBar>
             </div>
             <div className="pt-10">
@@ -64,7 +64,7 @@ export default function Subscription() {
               isOpen={isOpen}
               onDismiss={() => setIsOpen(false)}
               footer={
-                <div>
+                <div className="mx-0 sm:m-10">
                   <Button
                     disabled={isAnimating}
                     id="subscribe"
