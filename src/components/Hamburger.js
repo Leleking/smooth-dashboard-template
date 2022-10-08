@@ -12,13 +12,13 @@ export default function Hamburger({ className, active, type }) {
   );
   return (
     <button
-      class={hamburgerStyle}
+      className={hamburgerStyle}
       type="button"
       aria-label="Menu"
       aria-controls="navigation"
     >
-      <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
+      <span className="hamburger-box">
+        <span className="hamburger-inner"></span>
       </span>
     </button>
   );

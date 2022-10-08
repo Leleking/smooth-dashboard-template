@@ -5,12 +5,12 @@ import AuthLayout from "../../layouts/AuthLayout";
 export default function index() {
   return (
     <AuthLayout>
-      <div class="flex justify-center  md:px-8 animate__animated animate__fadeIn">
-        <div class="w-8/12">
-          <div class="text-center text-primary">
+      <div className="flex justify-center  md:px-8 animate__animated animate__fadeIn">
+        <div className="w-8/12">
+          <div className="text-center text-primary">
             Basic things to know about Mazzaroth (FAQs)
           </div>
-          <div class="pt-7">
+          <div className="pt-7">
             <Accordion>
               <Accordion.Item id="1" title="How do I reset my PIN?" height>
                 <div className="pt-6">

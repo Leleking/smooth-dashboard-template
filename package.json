@@ -12,6 +12,7 @@
     "lottie-web": "^5.9.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-rewards": "^2.0.4",
     "react-router-dom": "^6.4.0",
     "react-scripts": "5.0.1",
     "react-spring-bottom-sheet": "^3.4.1",

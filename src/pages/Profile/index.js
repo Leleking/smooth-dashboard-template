@@ -10,7 +10,7 @@ export default function History() {
           <PageHeader title="Profile" showLine={true} />
         </div>
         <div className="h-full">
-          <div class="grid grid-cols-1 lg:grid-cols-2  lg:divide-x h-full gap-x-0 lg:gap-x-2 divide-grey-100">
+          <div className="grid grid-cols-1 lg:grid-cols-2  lg:divide-x h-full gap-x-0 lg:gap-x-2 divide-grey-100">
             <div className=" w-full pt-8 pr-5">
               <div className="text-primary text-lg font-normal">
                 Personal Information
