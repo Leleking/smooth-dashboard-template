@@ -1,7 +1,7 @@
 {
-  "name": "smooth dashabord",
+  "name": "smooth-dashabord",
   "version": "0.1.0",
-  "homepage": "https://leleking.github.io/smooth-dashboard-template",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.7.3",
