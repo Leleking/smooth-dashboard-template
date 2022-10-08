@@ -10,8 +10,8 @@ export default function History() {
           <PageHeader title="Profile" showLine={true} />
         </div>
         <div className="h-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2  lg:divide-x h-full gap-x-0 lg:gap-x-2 divide-grey-100">
-            <div className=" w-full pt-8 pr-5">
+          <div className="flex flex-col lg:flex-row divide-x-0 lg:divide-x  gap-x-0 lg:gap-x-2 divide-grey-100">
+            <div className="w-full lg:w-1/2 h-full pt-8 pr-5">
               <div className="text-primary text-lg font-normal">
                 Personal Information
               </div>
@@ -50,13 +50,13 @@ export default function History() {
                 <Button>Update</Button>
               </div>
             </div>
-            <div className="pt-8  w-3/4 pl-10 ">
+            <div className="pt-8 w-full lg:w-1/2 pl-0 lg:pl-10 ">
               <div className="text-primary text-lg font-normal">
                 Address Information
               </div>
               <form className="pt-8">
                 <div className=" w-full">
-                  <Textarea rows="5" placeholder="address information" />
+                  <Textarea rows="4" placeholder="address information" />
                 </div>
                 <div className="pt-5 w-full">
                   <div className="w-full">

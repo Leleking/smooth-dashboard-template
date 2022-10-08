@@ -1,23 +1,27 @@
-import { useState } from "react";
-import {
-  PageHeader,
-  ProgressBar,
-  Modal,
-  LottieImg,
-  Button,
-} from "../../components";
+import { useEffect, useState } from "react";
+import { PageHeader, ProgressBar, Modal, Button } from "../../components";
 import { useReward } from "react-rewards";
 
 import AppLayout from "../../layouts/AppLayout";
+import Subs from "./Subs";
 
 export default function Subscription() {
   const [isOpen, setIsOpen] = useState(false);
+  const [progress, setProgress] = useState(0);
   const { reward, isAnimating } = useReward("subscribe", "confetti", {
     elementCount: 200,
   });
+  const [btnLabel, setBtnLabel] = useState("Subscribe");
+  useEffect(() => {
+    // api call
+    setTimeout(() => {
+      setProgress(43);
+    }, 500);
+  }, []);
 
   const subscribe = () => {
     reward();
+    setBtnLabel("Thank you");
   };
 
   return (
@@ -32,8 +36,10 @@ export default function Subscription() {
               <div className="text-primary">Upgrade</div>
             </div>
             <div className="pt-5">
-              <ProgressBar progress={"43%"}>
-                <div className="text-white">43 out of 50 searches used</div>
+              <ProgressBar progress={progress + "%"}>
+                <div className="text-white">
+                  {progress} out of 50 searches used
+                </div>
               </ProgressBar>
             </div>
             <div className="pt-10">
@@ -70,7 +76,7 @@ export default function Subscription() {
                     id="subscribe"
                     onClick={() => subscribe()}
                   >
-                    Subscribe
+                    <div>{btnLabel}</div>
                   </Button>
                 </div>
               }
@@ -82,14 +88,8 @@ export default function Subscription() {
               ]}
               expandOnContentDrag
             >
-              <div>
-                <div>
-                  <LottieImg
-                    src={require("../../assets/icons/coding.json")}
-                    name="pricing"
-                    className="h-72"
-                  />
-                </div>
+              <div className="mx-2 sm:mx-0">
+                <Subs />
               </div>
             </Modal>
           </div>
