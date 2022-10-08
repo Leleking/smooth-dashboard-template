@@ -6,7 +6,13 @@ import "./App.css";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter
+        basename={
+          process.env.NODE_ENV || process.env.NODE_ENV === "development"
+            ? ""
+            : "smooth-dashboard-template"
+        }
+      >
         <Router />
       </BrowserRouter>
     </>
