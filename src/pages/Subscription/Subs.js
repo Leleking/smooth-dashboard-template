@@ -4,20 +4,17 @@ import { RadioGroup } from "@headlessui/react";
 const plans = [
   {
     name: "Startup",
-    ram: "12GB",
-    cpus: "6 CPUs",
+    search: "200,000",
     disk: "160 GB SSD disk",
   },
   {
     name: "Business",
-    ram: "16GB",
-    cpus: "8 CPUs",
+    search: "1,000,000",
     disk: "512 GB SSD disk",
   },
   {
     name: "Enterprise",
-    ram: "32GB",
-    cpus: "12 CPUs",
+    search: "10,000,000",
     disk: "1024 GB SSD disk",
   },
 ];
@@ -60,9 +57,7 @@ export default function Subs() {
                               checked ? "text-sky-100" : "text-gray-500"
                             }`}
                           >
-                            <span>
-                              {plan.ram}/{plan.cpus}
-                            </span>{" "}
+                            <span>{plan.search} Searches</span>{" "}
                             <span aria-hidden="true">&middot;</span>{" "}
                             <span>{plan.disk}</span>
                           </RadioGroup.Description>
