@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/smooth-dashboard-template/static/css/main.08e93a4b.css",
-    "main.js": "/smooth-dashboard-template/static/js/main.ebb726e8.js",
+    "main.css": "/smooth-dashboard-template/static/css/main.e0487e0a.css",
+    "main.js": "/smooth-dashboard-template/static/js/main.bbab3c62.js",
     "static/js/787.fa016d5a.chunk.js": "/smooth-dashboard-template/static/js/787.fa016d5a.chunk.js",
     "static/media/logo.png": "/smooth-dashboard-template/static/media/logo.df8324f2b2bfed2f9ecb.png",
     "static/media/Dashboard.svg": "/smooth-dashboard-template/static/media/Dashboard.f69539c4c98d418ba5019b78becea818.svg",
@@ -15,12 +15,12 @@
     "static/media/account.svg": "/smooth-dashboard-template/static/media/account.0d1ccd5ad1e6a1d018d326270a8352af.svg",
     "static/media/sort.svg": "/smooth-dashboard-template/static/media/sort.084db1f5bded9d2dcd05d93d1fee8043.svg",
     "static/media/plus.svg": "/smooth-dashboard-template/static/media/plus.35297bd5111493212e44bea42dbf4761.svg",
-    "main.08e93a4b.css.map": "/smooth-dashboard-template/static/css/main.08e93a4b.css.map",
-    "main.ebb726e8.js.map": "/smooth-dashboard-template/static/js/main.ebb726e8.js.map",
+    "main.e0487e0a.css.map": "/smooth-dashboard-template/static/css/main.e0487e0a.css.map",
+    "main.bbab3c62.js.map": "/smooth-dashboard-template/static/js/main.bbab3c62.js.map",
     "787.fa016d5a.chunk.js.map": "/smooth-dashboard-template/static/js/787.fa016d5a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.08e93a4b.css",
-    "static/js/main.ebb726e8.js"
+    "static/css/main.e0487e0a.css",
+    "static/js/main.bbab3c62.js"
   ]
 }
